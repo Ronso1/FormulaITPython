@@ -8,10 +8,9 @@ count_month = 0
 money_capital += salary
 money_capital -= spend
 
-while money_capital > 0:
-    money_capital += salary
+while money_capital >= 0:
     spend = spend * (1 + increase)
-    money_capital -= spend
+    money_capital += salary - spend
     count_month += 1
 
 print("Количество месяцев, которое можно протянуть без долгов:", count_month)
