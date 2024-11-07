@@ -2,12 +2,13 @@ def count_letters(text):
     dictionary_of_words = {}
     text = text.replace(' ', '')
     text = text.lower()
-
+    
     for word in text:
-        if word.isalpha() and word not in dictionary_of_words:
-            dictionary_of_words[word] = 1
-        elif word.isalpha():
-            dictionary_of_words[word] = dictionary_of_words[word] + 1
+        if word.isalpha():   
+            if word not in dictionary_of_words:
+                dictionary_of_words[word] = 1
+            else:
+                dictionary_of_words[word] = dictionary_of_words[word] + 1
 
     return dictionary_of_words
 
